@@ -2,7 +2,7 @@ import {
   FETCH_POKEMONS_COMPLETE,
   FETCH_POKEMONS_ERROR,
   FETCH_POKEMONS_START,
-} from "../actions/results";
+} from '../actions/results';
 
 const initialState = {
   error: {},
@@ -11,6 +11,7 @@ const initialState = {
 };
 
 const resultReducer = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case FETCH_POKEMONS_START:
       return { ...state, isLoading: true };
